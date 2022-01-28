@@ -419,11 +419,5 @@ def aggregate(ds,wm):
 
     ds_combined = xr.Dataset(data_dict)    
 
-    # Put in class format
-    agg_out = aggregated(agg=wm.agg,source_grid=wm.source_grid,
-    					 geometry=wm.geometry,ds_in=ds_combined,weights=wm.weights)
-
-    # Return
-    print('all variables aggregated to polygons!')
-    return agg_out
+    return ds_combined
 
